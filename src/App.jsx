@@ -25,10 +25,7 @@ function App() {
       return;
     }
     let data = await response.json();
-    //console.log(await response.json())
-    //setPhotos(await  response.json());
     setPhotos(data.data.slice(0, 4));
-    // console.log(data.data.slice(0,4))
   };
   useEffect(() => {
     fetchPhotos();
